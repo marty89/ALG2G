@@ -44,10 +44,10 @@ public class InfoNoeud extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        valeurPane = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         valNoeudLab = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        LibellePane = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         libelleLab = new javax.swing.JLabel();
 
@@ -56,16 +56,16 @@ public class InfoNoeud extends javax.swing.JDialog {
         getContentPane().setLayout(new java.awt.GridLayout(2, 0));
 
         jLabel1.setText("Valeur noeud : ");
-        jPanel1.add(jLabel1);
-        jPanel1.add(valNoeudLab);
+        valeurPane.add(jLabel1);
+        valeurPane.add(valNoeudLab);
 
-        getContentPane().add(jPanel1);
+        getContentPane().add(valeurPane);
 
         jLabel3.setText("Libelle du noeud : ");
-        jPanel2.add(jLabel3);
-        jPanel2.add(libelleLab);
+        LibellePane.add(jLabel3);
+        LibellePane.add(libelleLab);
 
-        getContentPane().add(jPanel2);
+        getContentPane().add(LibellePane);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -112,11 +112,11 @@ public class InfoNoeud extends javax.swing.JDialog {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel LibellePane;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel libelleLab;
     private javax.swing.JLabel valNoeudLab;
+    private javax.swing.JPanel valeurPane;
     // End of variables declaration//GEN-END:variables
 }

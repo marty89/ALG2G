@@ -4,15 +4,11 @@
  */
 package be.esi.alg2.arbre.gui;
 
-import be.esi.alg2.arbre.implementation.ModeleImplementation;
-import be.esi.alg2.arbre.implementation.NoeudBinaireImplementation;
 import be.esi.alg2.arbre.metier.ArbreBinaireFacade;
 import be.esi.alg2.arbre.mvc.Modele;
 import be.esi.alg2.arbre.mvc.NoeudBinaire;
 import be.esi.alg2.arbre.mvc.ProfondeurMaximaleAtteinteException;
 import be.esi.alg2.arbre.mvc.Valeur;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -37,9 +33,6 @@ public class AjoutNoeudDialog extends javax.swing.JDialog {
         return modele;
     }
 
-    public void setModele(Modele modele) {
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,42 +42,50 @@ public class AjoutNoeudDialog extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        NorthPanel = new javax.swing.JPanel();
+        libellePane = new javax.swing.JPanel();
+        LibelleLab = new javax.swing.JLabel();
         libField = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
-        erreurLabel = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        clePane = new javax.swing.JPanel();
+        cleLab = new javax.swing.JLabel();
         cleField = new javax.swing.JTextField();
-        jPanel3 = new javax.swing.JPanel();
+        CenterPanel = new javax.swing.JPanel();
+        erreurLabel = new javax.swing.JLabel();
+        SouthPanel = new javax.swing.JPanel();
         valideButton = new javax.swing.JButton();
         cancelButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Ajout d'un noeud");
+        setMinimumSize(new java.awt.Dimension(149, 139));
 
-        jLabel1.setText("Libellé : ");
-        jPanel1.add(jLabel1);
+        NorthPanel.setLayout(new java.awt.BorderLayout());
+
+        LibelleLab.setText("Libellé : ");
+        libellePane.add(LibelleLab);
 
         libField.setColumns(20);
-        jPanel1.add(libField);
+        libellePane.add(libField);
 
-        jPanel4.add(erreurLabel);
+        NorthPanel.add(libellePane, java.awt.BorderLayout.PAGE_END);
 
-        jPanel1.add(jPanel4);
+        clePane.setMinimumSize(new java.awt.Dimension(46, 46));
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
-
-        jLabel2.setText("Clé : ");
-        jPanel2.add(jLabel2);
+        cleLab.setText("Clé : ");
+        clePane.add(cleLab);
 
         cleField.setColumns(20);
-        jPanel2.add(cleField);
+        clePane.add(cleField);
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_START);
+        NorthPanel.add(clePane, java.awt.BorderLayout.PAGE_START);
 
-        jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+        getContentPane().add(NorthPanel, java.awt.BorderLayout.NORTH);
+
+        CenterPanel.add(erreurLabel);
+
+        getContentPane().add(CenterPanel, java.awt.BorderLayout.CENTER);
+
+        SouthPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         valideButton.setText("Valider");
         valideButton.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +93,7 @@ public class AjoutNoeudDialog extends javax.swing.JDialog {
                 valideButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(valideButton);
+        SouthPanel.add(valideButton);
 
         cancelButton.setText("Annuler");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -100,9 +101,9 @@ public class AjoutNoeudDialog extends javax.swing.JDialog {
                 cancelButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(cancelButton);
+        SouthPanel.add(cancelButton);
 
-        getContentPane().add(jPanel3, java.awt.BorderLayout.PAGE_END);
+        getContentPane().add(SouthPanel, java.awt.BorderLayout.SOUTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -120,6 +121,7 @@ public class AjoutNoeudDialog extends javax.swing.JDialog {
             } catch (ProfondeurMaximaleAtteinteException ex) {
                 JOptionPane.showMessageDialog(this, ex.getMessage());
             }
+            this.repaint();
         }else{
             this.erreurLabel.setText("la clé doit etre >= à 0");
         }
@@ -176,16 +178,17 @@ public class AjoutNoeudDialog extends javax.swing.JDialog {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel CenterPanel;
+    private javax.swing.JLabel LibelleLab;
+    private javax.swing.JPanel NorthPanel;
+    private javax.swing.JPanel SouthPanel;
     private javax.swing.JButton cancelButton;
     private javax.swing.JTextField cleField;
+    private javax.swing.JLabel cleLab;
+    private javax.swing.JPanel clePane;
     private javax.swing.JLabel erreurLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField libField;
+    private javax.swing.JPanel libellePane;
     private javax.swing.JButton valideButton;
     // End of variables declaration//GEN-END:variables
 

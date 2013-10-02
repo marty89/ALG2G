@@ -76,8 +76,6 @@ public class Accueil extends javax.swing.JFrame {
     private void initComponents() {
 
         visuArbre1 = new be.esi.alg2.visuarbre.VisuArbre();
-        jPanel1 = new javax.swing.JPanel();
-        sauvegardeLabel = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMNouveau = new javax.swing.JMenuItem();
@@ -108,18 +106,10 @@ public class Accueil extends javax.swing.JFrame {
         );
         visuArbre1Layout.setVerticalGroup(
             visuArbre1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 470, Short.MAX_VALUE)
+            .addGap(0, 497, Short.MAX_VALUE)
         );
 
         getContentPane().add(visuArbre1, java.awt.BorderLayout.CENTER);
-
-        sauvegardeLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        sauvegardeLabel.setForeground(new java.awt.Color(51, 255, 51));
-        sauvegardeLabel.setText("hr");
-        sauvegardeLabel.setToolTipText("");
-        jPanel1.add(sauvegardeLabel);
-
-        getContentPane().add(jPanel1, java.awt.BorderLayout.SOUTH);
 
         jMenu1.setText("Arbre");
 
@@ -319,11 +309,9 @@ public class Accueil extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuGRD;
     private javax.swing.JMenuItem jMenuRGD;
     private javax.swing.JMenuItem jMsupprimer;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JPopupMenu.Separator jSeparator4;
-    private javax.swing.JLabel sauvegardeLabel;
     private be.esi.alg2.visuarbre.VisuArbre visuArbre1;
     // End of variables declaration//GEN-END:variables
 
@@ -331,7 +319,7 @@ public class Accueil extends javax.swing.JFrame {
         visuArbre1.setModele(modele);
         vueGRD = new VueArbre("GRD");
         vueGDR = new VueArbre("GDR");
-        vueRGD = new VueArbre("GDR");
+        vueRGD = new VueArbre("RGD");
         modele.addSelectionListener(vueGRD);
         modele.addSelectionListener(vueGDR);
         modele.addSelectionListener(vueRGD);

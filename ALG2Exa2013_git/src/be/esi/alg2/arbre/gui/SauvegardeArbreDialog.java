@@ -52,24 +52,24 @@ public class SauvegardeArbreDialog extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        sauvegardePane = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         nomArbreField = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
+        ButtonPane = new javax.swing.JPanel();
         saveButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Sauvegarde d'un arbre");
 
         jLabel1.setText("Nom de l'arbre à Sauver :");
-        jPanel1.add(jLabel1);
+        sauvegardePane.add(jLabel1);
 
         nomArbreField.setColumns(30);
-        jPanel1.add(nomArbreField);
+        sauvegardePane.add(nomArbreField);
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+        getContentPane().add(sauvegardePane, java.awt.BorderLayout.CENTER);
 
-        jPanel2.setLayout(new java.awt.BorderLayout());
+        ButtonPane.setLayout(new java.awt.BorderLayout());
 
         saveButton.setText("Sauvegarder");
         saveButton.addActionListener(new java.awt.event.ActionListener() {
@@ -77,9 +77,9 @@ public class SauvegardeArbreDialog extends javax.swing.JDialog {
                 saveButtonActionPerformed(evt);
             }
         });
-        jPanel2.add(saveButton, java.awt.BorderLayout.EAST);
+        ButtonPane.add(saveButton, java.awt.BorderLayout.EAST);
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.SOUTH);
+        getContentPane().add(ButtonPane, java.awt.BorderLayout.SOUTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -153,10 +153,10 @@ public class SauvegardeArbreDialog extends javax.swing.JDialog {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel ButtonPane;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField nomArbreField;
+    private javax.swing.JPanel sauvegardePane;
     private javax.swing.JButton saveButton;
     // End of variables declaration//GEN-END:variables
 }
