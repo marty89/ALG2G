@@ -10,7 +10,6 @@ import be.esi.alg2.arbre.gui.VueArbre;
 import be.esi.alg2.arbre.gui.AjoutNoeudDialog;
 import be.esi.alg2.arbre.gui.InfoNoeud;
 import be.esi.alg2.arbre.metier.ArbreBinaireFacade;
-import be.esi.alg2.arbre.mvc.ArbreModificationListener;
 import be.esi.alg2.arbre.mvc.Modele;
 import be.esi.alg2.arbre.mvc.NoeudBinaire;
 import be.esi.alg2.visuarbre.VisuArbre;
@@ -18,7 +17,6 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 import javax.swing.JOptionPane;
-import javax.swing.Timer;
 
 /**
  * JFrame d'accueil de l'application de visualisation des arbres binaires
